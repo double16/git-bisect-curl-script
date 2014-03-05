@@ -26,9 +26,9 @@ APP="http://localhost:8090/git-bisect-curl-app/"
 CURL_OPTS="--silent --insecure --cookie "${COOKIE_JAR}" --cookie-jar "${COOKIE_JAR}" --fail --location"
 
 # Ensure the application is running by using the --fail option when an HTTP status code of 400+ is returned
-# We wait a maximum of 90 seconds with 15 seconds between checks
+# We wait a maximum of 120 seconds with 15 seconds between checks
 START=$(date +%s)
-while [ $((($(date +%s)-${START}))) -lt 90 ] && ! curl --silent --cookie-jar "${COOKIE_JAR}" --fail "${APP}">>"${LOG}"; do
+while [ $((($(date +%s)-${START}))) -lt 120 ] && ! curl --silent --cookie-jar "${COOKIE_JAR}" --fail "${APP}">>"${LOG}"; do
 	sleep 15s;
 done
 [ $? -ne 0 ] && exit 125

@@ -16,7 +16,7 @@ WD="$(dirname $0)"
 # Start the app
 ./grailsw -Dserver.port=8090 -Ddisable.auto.recompile=true -non-interactive RunApp &
 GRAILS_PID=$!
-sleep 15s
+sleep 30s
 
 # Run the test, includes waiting for the application to start
 "${WD}/test.sh"
