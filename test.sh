@@ -1,4 +1,4 @@
-#!/usr/bin/env /bin/bash -x
+#!/bin/bash -x
 
 #
 # Test the application using the web interface with 'curl'. Assume the application has been built and started.

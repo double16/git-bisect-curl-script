@@ -1,4 +1,4 @@
-#!/usr/bin/env /bin/bash -x
+#!/bin/bash -x
 
 #
 # Script intended to be used with 'git bisect' to find issues in the git-bisect-curl-app application. This script does not
